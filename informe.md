@@ -135,4 +135,5 @@ La animación muestra:
 
 ## 👥 Autores
 
-- [Nombre del equipo o integrantes]
+- Victoria Hernandez
+- Alexander Gómez
