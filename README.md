@@ -81,4 +81,5 @@ El archivo `data/casos_coloracion_grafos.txt` debe tener:
 
 ## 🧠 Autores
 
-- [Nombre del equipo o integrantes]
+- Victoria Hernandez
+- Alexander Gómez
