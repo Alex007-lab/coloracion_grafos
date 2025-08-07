@@ -303,7 +303,7 @@
 1 6
 
 # Caso 18: grafo aleatorio grande
-20 25
+20 23
 0 1
 2 3
 4 5
