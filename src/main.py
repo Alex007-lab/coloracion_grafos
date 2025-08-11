@@ -28,7 +28,7 @@ def guardar_solucion(idx, colores, conflictos, tiempo, k, iteraciones):
     soluciones_path = os.path.join(script_dir, "..", "results", "soluciones.txt")
 
     # Abrir el archivo en modo de añadir (`"a"`), lo que permite escribir al final sin borrar el contenido anterior.
-    with open(soluciones_path, "a") as f:
+    with open(soluciones_path, "a", encoding="utf-8") as f:
         f.write(f"\n🟢 Caso {idx}\n")  # Encabezado del caso.
         f.write(f"  - Colores usados: {len(set(colores.values()))} (k = {k})\n")  # Muestra la cantidad de colores únicos usados.
         f.write(f"  - Conflictos: {conflictos}\n")  # Reporta el número de conflictos.
@@ -63,7 +63,7 @@ def main():
 
     # Limpiar o crear el archivo `soluciones.txt` antes de cada ejecución.
     # El modo `"w"` sobrescribe el contenido anterior.
-    open(soluciones_path, "w").close()
+    open(soluciones_path, "w", encoding="utf-8").close()
 
     # Leer todos los casos de grafos del archivo de datos.
     casos = leer_casos(ruta)
