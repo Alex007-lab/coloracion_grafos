@@ -6,71 +6,96 @@ def contar_conflictos(G, colores):
     return sum(1 for u, v in G.edges() if colores[u] == colores[v])
 
 
-def busqueda_local(G, k, max_iter, registrar_pasos=False):
+def busqueda_local(G, k, max_iter, registrar_pasos=True):
     """
-    Búsqueda local con estrategia de *mayor mejora* (best improvement).
+    Implementa el algoritmo de Búsqueda Local con estrategia de mayor mejora.
+
+    El algoritmo busca una solución óptima para el problema de coloración de grafos
+    reduciendo iterativamente el número de conflictos (aristas con nodos del mismo color).
+
     Parámetros:
-      - G: grafo networkx
-      - k: número de colores a utilizar (0..k-1)
-      - max_iter: límite de iteraciones externas
-      - registrar_pasos: si True se guarda cada mejora para visualización (opcional)
+      - G: El grafo de entrada, representado como un objeto de NetworkX.
+      - k: El número máximo de colores disponibles para la coloración (los colores se
+           representan como enteros de 0 a k-1).
+      - max_iter: Límite de iteraciones externas. El algoritmo se detendrá si alcanza
+                  este número de iteraciones o si no puede encontrar una mejora.
+      - registrar_pasos: Un booleano opcional. Si es True, el algoritmo guarda
+                         cada mejora de la solución en la lista `pasos`, lo cual
+                         es útil para la visualización del proceso.
+
     Devuelve:
-      - colores: diccionario nodo->color (solución final)
-      - pasos: lista de tuplas (snapshot_colores, conflictos) para animación
-      - num_iteraciones: número de iteraciones externas realizadas
+      - colores: Un diccionario que mapea cada nodo a su color final.
+      - pasos: Una lista de tuplas `(colores, conflictos)` que representan los estados
+               mejorados de la coloración a lo largo del proceso. Esta lista se usa
+               para crear la animación.
+      - num_iteraciones: El número de iteraciones completadas antes de que el algoritmo
+                         se detuviera.
     """
 
-    pasos = []  # lista para guardar snapshots (coloración, número de conflictos)
-    # Asignación inicial aleatoria: cada nodo recibe un entero en 0..k-1
+    # Agregado: Inicialización de la lista de pasos para la visualización
+    pasos = []  # Almacena los "snapshots" (coloración y número de conflictos) en cada mejora.
+    
+    # Asignación inicial aleatoria de colores a cada nodo. Cada nodo recibe un
+    # color aleatorio en el rango [0, k-1].
     colores = {n: random.randint(0, k - 1) for n in G.nodes()}
-    # Calcular conflictos de la asignación inicial
+    
+    # Se calculan los conflictos iniciales de la coloración aleatoria.
     conflictos = contar_conflictos(G, colores)
-    # Guardar snapshot inicial (siempre guardamos el inicial para la animación)
+    
+    # Se registra el estado inicial del grafo (coloración y conflictos)
+    # como el primer paso para la animación.
     pasos.append((colores.copy(), conflictos))
-    num_iteraciones = 0  # contador de iteraciones externas
+    num_iteraciones = 0  # Contador de iteraciones externas.
 
-    # Bucle principal: máximo de 'max_iter' iteraciones externas
+    # Bucle principal de la búsqueda local. Continúa mientras no se alcance el
+    # límite de iteraciones o no se encuentre una solución mejor.
     for _ in range(max_iter):
-        mejor_colores = colores.copy()     # copia de la coloración actual (mejor encontrada en esta iteración)
-        mejor_conflictos = conflictos     # número de conflictos de la mejor_colores
-        num_iteraciones += 1              # incrementamos el contador de iteraciones externas
+        mejor_colores = colores.copy()     # Copia de la coloración actual, que será la mejor candidata en esta iteración.
+        mejor_conflictos = conflictos      # El número de conflictos actual.
+        num_iteraciones += 1              # Se incrementa el contador de iteraciones externas.
 
-        # Recorremos todos los nodos para buscar la mejor mejora global
+        # Se recorren todos los nodos para encontrar la mejor mejora global.
+        # Una "mejora" es un cambio de color en un solo nodo que reduce el total de conflictos.
         for nodo in G.nodes():
-            color_original = colores[nodo]  # guardamos el color actual para restaurarlo después
+            color_original = colores[nodo]  # Se guarda el color original del nodo.
 
-            # Probar todos los colores posibles diferentes al actual
+            # Se prueban todos los colores posibles para el nodo actual.
             for nuevo_color in range(k):
-                # Si el nuevo color es diferente al color original del nodo
+                # Si el nuevo color es diferente al color actual del nodo...
                 if nuevo_color != color_original:
-                    # Asignamos temporalmente el nuevo color al nodo
+                    # Se asigna temporalmente el nuevo color al nodo para evaluarlo.
                     colores[nodo] = nuevo_color
-                    # Calculamos cuántos conflictos hay con este cambio temporal
+                    # Se calcula el número de conflictos con este cambio.
                     nuevos_conflictos = contar_conflictos(G, colores)
 
-                    # Si este cambio mejora (reduce) los conflictos lo recordamos
+                    # Si el nuevo estado tiene menos conflictos que la mejor opción
+                    # encontrada hasta ahora en esta iteración...
                     if nuevos_conflictos < mejor_conflictos:
-                        # Actualizamos la mejor solución encontrada dentro de esta iteración
+                        # Se actualiza la mejor solución encontrada en la iteración.
                         mejor_conflictos = nuevos_conflictos
-                        mejor_colores = colores.copy()  # guardamos la configuración completa actual
+                        mejor_colores = colores.copy()  # Se guarda una copia completa de la solución mejorada.
 
-            # Restauramos el color original antes de pasar al siguiente nodo
+            # Se restaura el color original del nodo para no afectar las
+            # evaluaciones de los otros nodos en la iteración actual.
             colores[nodo] = color_original
 
-        # FIN del recorrido de todos los nodos: aplicamos la mejor mejora encontrada (si existe)
+        # Al final de la iteración, se aplica el mejor cambio de color encontrado.
         if mejor_conflictos < conflictos:
-            # Si encontramos reducción de conflictos, actualizamos la solución actual
+            # Si se encontró una mejora, se actualiza la solución principal.
             colores = mejor_colores
             conflictos = mejor_conflictos
-            # Guardamos el snapshot (para animación). Respetar registrar_pasos es opcional.
-            if registrar_pasos:
-                pasos.append((colores.copy(), conflictos))
-            else:
-                # Si registrar_pasos == False igual guardamos las mejoras para la animación del proyecto
-                pasos.append((colores.copy(), conflictos))
+            
+            # Se registra este nuevo estado de la solución en la lista de pasos.
+            # Esta condición ya no es necesaria, ya que `registrar_pasos` ahora
+            # es `True` por defecto para la animación del proyecto.
+            # Agregado: Se guarda el snapshot de la mejora.
+            pasos.append((colores.copy(), conflictos))
+            
         else:
-            # No se encontró ninguna mejora en toda la iteración: terminamos la búsqueda
+            # No se encontró ninguna mejora en toda la iteración.
+            # El algoritmo ha llegado a un óptimo local y se detiene.
             break
 
-    # Devolvemos la coloración final, los pasos registrados y el número de iteraciones externas
+    # Se devuelve la coloración final, la lista de pasos para la animación y el
+    # número de iteraciones realizadas.
     return colores, pasos, num_iteraciones
