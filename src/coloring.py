@@ -6,11 +6,6 @@ def contar_conflictos(G, colores):
     return sum(1 for u, v in G.edges() if colores[u] == colores[v])
 
 
-def colores_usados(colores):
-    # Devuelve la cantidad de colores distintos presentes en el diccionario 'colores'.
-    return len(set(colores.values()))
-
-
 def busqueda_local(G, k, max_iter, registrar_pasos=False):
     """
     Búsqueda local con estrategia de *mayor mejora* (best improvement).

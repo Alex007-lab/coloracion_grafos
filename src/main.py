@@ -1,7 +1,7 @@
 import time  # Para medir tiempos de ejecución
 import os  # Para manejo de archivos y carpetas
 from graph_utils import leer_casos  # Función para leer grafos desde archivo
-from coloring import busqueda_local, contar_conflictos, colores_usados  # Funciones del algoritmo de coloración
+from coloring import busqueda_local, contar_conflictos  # Funciones del algoritmo de coloración
 from visualization import crear_animacion  # Función para generar animación de la solución
 
 # Función para guardar la solución de cada caso en un archivo de texto
