@@ -20,14 +20,20 @@ def dibujar_grafo(G, colores, conflictos, pos, paso, descripcion, carpeta_salida
 
     ax.set_title(f"Paso {paso}: {descripcion}")
     plt.axis("off")
-    nombre_img = f"{carpeta_salida}/tmp_{paso}.png"
+    nombre_img = os.path.join(carpeta_salida, f"tmp_{paso}.png")
     plt.savefig(nombre_img)
     plt.close()
     return nombre_img
 
-def crear_animacion(G, pasos, caso_id, k, carpeta_salida="../results/grafos_coloreados", duration=1.2):
+def crear_animacion(G, pasos, caso_id, k, duration=1.2):
+    # Obtiene la ruta del directorio del script actual (visualization.py).
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    # Construye la ruta completa a la carpeta de gifs, navegando desde src hasta results.
+    carpeta_salida = os.path.join(script_dir, "..", "results", "grafos_coloreados")
+    
     os.makedirs(carpeta_salida, exist_ok=True)
-    ruta_gif = f"{carpeta_salida}/caso_{caso_id}_k{k}.gif"
+    ruta_gif = os.path.join(carpeta_salida, f"caso_{caso_id}_k{k}.gif")
     pos = nx.spring_layout(G, seed=42)
 
     frames = []
@@ -63,6 +69,7 @@ def crear_animacion(G, pasos, caso_id, k, carpeta_salida="../results/grafos_colo
 
     # Limpieza
     for i in range(paso):
-        tmp_path = f"{carpeta_salida}/tmp_{i}.png"
+        tmp_path = os.path.join(carpeta_salida, f"tmp_{i}.png")
         if os.path.exists(tmp_path):
             os.remove(tmp_path)
+            

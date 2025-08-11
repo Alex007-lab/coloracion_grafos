@@ -6,8 +6,13 @@ from visualization import crear_animacion  # Función para generar animación de
 
 # Función para guardar la solución de cada caso en un archivo de texto
 def guardar_solucion(idx, colores, conflictos, tiempo, k, iteraciones):
+    # Obtener la ruta del directorio actual del script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    # Construir la ruta al archivo de soluciones de forma segura
+    soluciones_path = os.path.join(script_dir, "..", "results", "soluciones.txt")
+
     # Abrir (o crear) el archivo soluciones.txt en modo añadir texto
-    with open("../results/soluciones.txt", "a") as f:
+    with open(soluciones_path, "a") as f:
         f.write(f"\n🟢 Caso {idx}\n")  # Indicar número del caso
         f.write(f"  - Colores usados: {len(set(colores.values()))} (k = {k})\n")  # Cantidad de colores usados
         f.write(f"  - Conflictos: {conflictos}\n")  # Número de conflictos (idealmente 0)
@@ -19,13 +24,23 @@ def guardar_solucion(idx, colores, conflictos, tiempo, k, iteraciones):
 
 # Función principal que ejecuta todo el programa
 def main():
-    ruta = "../data/casos_coloracion_grafos.txt"  # Ruta del archivo con casos de prueba
+    # Obtener la ruta del directorio actual del script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Construir la ruta al archivo con casos de prueba de forma segura
+    ruta = os.path.join(script_dir, "..", "data", "casos_coloracion_grafos.txt")
+
+    # Construir la ruta al directorio de resultados de forma segura
+    results_dir = os.path.join(script_dir, "..", "results")
 
     # Crear la carpeta results si no existe para guardar resultados y animaciones
-    os.makedirs("results", exist_ok=True)
+    os.makedirs(results_dir, exist_ok=True)
+
+    # Construir la ruta al archivo de soluciones de forma segura
+    soluciones_path = os.path.join(results_dir, "soluciones.txt")
 
     # Limpiar o crear el archivo soluciones.txt (sobrescribe contenido anterior)
-    open("../results/soluciones.txt", "w").close()
+    open(soluciones_path, "w").close()
 
     # Leer los casos desde el archivo, retorna una lista de grafos NetworkX
     casos = leer_casos(ruta)
@@ -85,3 +100,4 @@ def main():
 # Este bloque ejecuta main() solo si este script se ejecuta directamente
 if __name__ == "__main__":
     main()
+    

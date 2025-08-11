@@ -4,16 +4,16 @@
   - Conflictos: 0
   - Iteraciones: 2
   - Tiempo: 0.0000 segundos
-    Nodo 0: Color 1
-    Nodo 1: Color 2
+    Nodo 0: Color 2
+    Nodo 1: Color 1
     Nodo 2: Color 0
-    Nodo 3: Color 1
+    Nodo 3: Color 0
     Nodo 4: Color 2
 
 🟢 Caso 2
   - Colores usados: 3 (k = 3)
   - Conflictos: 0
-  - Iteraciones: 3
+  - Iteraciones: 2
   - Tiempo: 0.0001 segundos
     Nodo 0: Color 0
     Nodo 1: Color 1
@@ -25,155 +25,155 @@
 🟢 Caso 3
   - Colores usados: 4 (k = 4)
   - Conflictos: 0
-  - Iteraciones: 2
+  - Iteraciones: 3
   - Tiempo: 0.0001 segundos
-    Nodo 0: Color 3
+    Nodo 0: Color 0
     Nodo 1: Color 1
-    Nodo 2: Color 0
-    Nodo 3: Color 2
+    Nodo 2: Color 2
+    Nodo 3: Color 3
 
 🟢 Caso 4
   - Colores usados: 3 (k = 3)
   - Conflictos: 0
-  - Iteraciones: 3
-  - Tiempo: 0.0001 segundos
-    Nodo 0: Color 0
-    Nodo 1: Color 0
-    Nodo 2: Color 0
-    Nodo 3: Color 2
-    Nodo 4: Color 2
-    Nodo 5: Color 1
+  - Iteraciones: 1
+  - Tiempo: 0.0000 segundos
+    Nodo 0: Color 2
+    Nodo 1: Color 1
+    Nodo 2: Color 2
+    Nodo 3: Color 0
+    Nodo 4: Color 1
+    Nodo 5: Color 0
 
 🟢 Caso 5
   - Colores usados: 3 (k = 3)
   - Conflictos: 0
-  - Iteraciones: 3
+  - Iteraciones: 2
   - Tiempo: 0.0001 segundos
-    Nodo 0: Color 0
-    Nodo 1: Color 1
-    Nodo 2: Color 0
-    Nodo 3: Color 1
+    Nodo 0: Color 2
+    Nodo 1: Color 0
+    Nodo 2: Color 2
+    Nodo 3: Color 0
     Nodo 4: Color 2
-    Nodo 5: Color 0
-    Nodo 6: Color 1
+    Nodo 5: Color 1
+    Nodo 6: Color 0
 
 🟢 Caso 6
   - Colores usados: 7 (k = 7)
   - Conflictos: 0
   - Iteraciones: 4
-  - Tiempo: 0.0009 segundos
+  - Tiempo: 0.0007 segundos
     Nodo 0: Color 2
-    Nodo 1: Color 5
+    Nodo 1: Color 4
     Nodo 2: Color 6
-    Nodo 3: Color 1
-    Nodo 4: Color 3
-    Nodo 5: Color 0
-    Nodo 6: Color 4
-    Nodo 7: Color 4
+    Nodo 3: Color 0
+    Nodo 4: Color 1
+    Nodo 5: Color 5
+    Nodo 6: Color 3
+    Nodo 7: Color 3
 
 🟢 Caso 7
-  - Colores usados: 2 (k = 2)
+  - Colores usados: 3 (k = 3)
   - Conflictos: 0
   - Iteraciones: 4
-  - Tiempo: 0.0001 segundos
+  - Tiempo: 0.0002 segundos
     Nodo 0: Color 1
     Nodo 1: Color 0
     Nodo 2: Color 0
-    Nodo 3: Color 0
+    Nodo 3: Color 2
     Nodo 4: Color 0
-    Nodo 5: Color 1
+    Nodo 5: Color 2
     Nodo 6: Color 0
     Nodo 7: Color 0
-    Nodo 8: Color 0
-    Nodo 9: Color 0
+    Nodo 8: Color 1
+    Nodo 9: Color 1
 
 🟢 Caso 8
   - Colores usados: 4 (k = 4)
   - Conflictos: 0
   - Iteraciones: 3
   - Tiempo: 0.0003 segundos
-    Nodo 0: Color 1
-    Nodo 1: Color 2
-    Nodo 2: Color 2
-    Nodo 3: Color 3
-    Nodo 4: Color 3
-    Nodo 5: Color 3
-    Nodo 6: Color 1
-    Nodo 7: Color 1
-    Nodo 8: Color 0
-    Nodo 9: Color 0
-    Nodo 10: Color 2
-    Nodo 11: Color 2
+    Nodo 0: Color 2
+    Nodo 1: Color 3
+    Nodo 2: Color 1
+    Nodo 3: Color 0
+    Nodo 4: Color 2
+    Nodo 5: Color 0
+    Nodo 6: Color 0
+    Nodo 7: Color 3
+    Nodo 8: Color 3
+    Nodo 9: Color 3
+    Nodo 10: Color 1
+    Nodo 11: Color 1
 
 🟢 Caso 9
   - Colores usados: 6 (k = 6)
   - Conflictos: 0
-  - Iteraciones: 3
+  - Iteraciones: 4
   - Tiempo: 0.0003 segundos
     Nodo 0: Color 0
-    Nodo 1: Color 4
-    Nodo 2: Color 1
-    Nodo 3: Color 3
+    Nodo 1: Color 1
+    Nodo 2: Color 4
+    Nodo 3: Color 5
     Nodo 4: Color 2
-    Nodo 5: Color 5
+    Nodo 5: Color 3
 
 🟢 Caso 10
   - Colores usados: 3 (k = 3)
   - Conflictos: 0
-  - Iteraciones: 2
+  - Iteraciones: 1
   - Tiempo: 0.0001 segundos
-    Nodo 0: Color 2
-    Nodo 1: Color 0
+    Nodo 0: Color 1
+    Nodo 1: Color 2
     Nodo 2: Color 1
-    Nodo 3: Color 2
-    Nodo 4: Color 0
-    Nodo 5: Color 2
-    Nodo 6: Color 0
-    Nodo 7: Color 2
-    Nodo 8: Color 1
+    Nodo 3: Color 0
+    Nodo 4: Color 1
+    Nodo 5: Color 0
+    Nodo 6: Color 2
+    Nodo 7: Color 0
+    Nodo 8: Color 2
 
 🟢 Caso 11
   - Colores usados: 3 (k = 3)
   - Conflictos: 0
-  - Iteraciones: 5
+  - Iteraciones: 4
   - Tiempo: 0.0002 segundos
-    Nodo 0: Color 1
-    Nodo 1: Color 0
-    Nodo 2: Color 2
-    Nodo 3: Color 1
-    Nodo 4: Color 2
+    Nodo 0: Color 0
+    Nodo 1: Color 1
+    Nodo 2: Color 0
+    Nodo 3: Color 2
+    Nodo 4: Color 0
     Nodo 5: Color 0
-    Nodo 6: Color 1
-    Nodo 7: Color 2
-    Nodo 8: Color 2
-    Nodo 9: Color 0
+    Nodo 6: Color 2
+    Nodo 7: Color 1
+    Nodo 8: Color 0
+    Nodo 9: Color 1
 
 🟢 Caso 12
-  - Colores usados: 3 (k = 3)
+  - Colores usados: 4 (k = 4)
   - Conflictos: 0
-  - Iteraciones: 6
-  - Tiempo: 0.0007 segundos
+  - Iteraciones: 3
+  - Tiempo: 0.0005 segundos
     Nodo 0: Color 0
-    Nodo 1: Color 2
-    Nodo 2: Color 1
+    Nodo 1: Color 3
+    Nodo 2: Color 2
     Nodo 3: Color 0
-    Nodo 4: Color 2
-    Nodo 5: Color 1
-    Nodo 6: Color 0
-    Nodo 7: Color 2
+    Nodo 4: Color 1
+    Nodo 5: Color 0
+    Nodo 6: Color 1
+    Nodo 7: Color 3
     Nodo 8: Color 0
-    Nodo 9: Color 2
-    Nodo 10: Color 0
-    Nodo 11: Color 1
-    Nodo 12: Color 0
-    Nodo 13: Color 1
+    Nodo 9: Color 3
+    Nodo 10: Color 1
+    Nodo 11: Color 2
+    Nodo 12: Color 1
+    Nodo 13: Color 0
     Nodo 14: Color 2
 
 🟢 Caso 13
   - Colores usados: 2 (k = 2)
   - Conflictos: 0
-  - Iteraciones: 5
-  - Tiempo: 0.0002 segundos
+  - Iteraciones: 6
+  - Tiempo: 0.0003 segundos
     Nodo 0: Color 1
     Nodo 1: Color 1
     Nodo 2: Color 1
@@ -186,64 +186,64 @@
     Nodo 9: Color 0
 
 🟢 Caso 14
-  - Colores usados: 3 (k = 3)
+  - Colores usados: 2 (k = 2)
   - Conflictos: 0
-  - Iteraciones: 5
-  - Tiempo: 0.0008 segundos
-    Nodo 0: Color 2
+  - Iteraciones: 6
+  - Tiempo: 0.0005 segundos
+    Nodo 0: Color 0
     Nodo 1: Color 1
-    Nodo 2: Color 2
-    Nodo 3: Color 0
-    Nodo 4: Color 0
-    Nodo 5: Color 2
-    Nodo 6: Color 0
-    Nodo 7: Color 2
-    Nodo 8: Color 2
-    Nodo 9: Color 0
-    Nodo 10: Color 2
+    Nodo 2: Color 0
+    Nodo 3: Color 1
+    Nodo 4: Color 1
+    Nodo 5: Color 0
+    Nodo 6: Color 1
+    Nodo 7: Color 0
+    Nodo 8: Color 0
+    Nodo 9: Color 1
+    Nodo 10: Color 0
     Nodo 11: Color 1
-    Nodo 12: Color 0
-    Nodo 13: Color 2
+    Nodo 12: Color 1
+    Nodo 13: Color 0
     Nodo 14: Color 1
     Nodo 15: Color 0
 
 🟢 Caso 15
   - Colores usados: 6 (k = 6)
   - Conflictos: 0
-  - Iteraciones: 5
-  - Tiempo: 0.0018 segundos
-    Nodo 0: Color 3
+  - Iteraciones: 6
+  - Tiempo: 0.0020 segundos
+    Nodo 0: Color 1
     Nodo 1: Color 4
-    Nodo 2: Color 0
+    Nodo 2: Color 3
     Nodo 3: Color 2
-    Nodo 4: Color 2
-    Nodo 5: Color 0
+    Nodo 4: Color 4
+    Nodo 5: Color 3
     Nodo 6: Color 1
     Nodo 7: Color 1
-    Nodo 8: Color 3
-    Nodo 9: Color 2
+    Nodo 8: Color 5
+    Nodo 9: Color 4
     Nodo 10: Color 0
-    Nodo 11: Color 5
+    Nodo 11: Color 2
 
 🟢 Caso 16
   - Colores usados: 3 (k = 3)
   - Conflictos: 0
-  - Iteraciones: 6
-  - Tiempo: 0.0006 segundos
+  - Iteraciones: 5
+  - Tiempo: 0.0005 segundos
     Nodo 0: Color 0
-    Nodo 1: Color 1
-    Nodo 2: Color 2
-    Nodo 3: Color 2
-    Nodo 4: Color 0
+    Nodo 1: Color 2
+    Nodo 2: Color 1
+    Nodo 3: Color 1
+    Nodo 4: Color 1
     Nodo 5: Color 0
-    Nodo 6: Color 0
-    Nodo 7: Color 1
+    Nodo 6: Color 2
+    Nodo 7: Color 0
     Nodo 8: Color 0
-    Nodo 9: Color 2
-    Nodo 10: Color 1
+    Nodo 9: Color 0
+    Nodo 10: Color 0
     Nodo 11: Color 1
-    Nodo 12: Color 1
-    Nodo 13: Color 1
+    Nodo 12: Color 2
+    Nodo 13: Color 0
     Nodo 14: Color 1
 
 🟢 Caso 17
@@ -251,75 +251,75 @@
   - Conflictos: 0
   - Iteraciones: 5
   - Tiempo: 0.0003 segundos
-    Nodo 0: Color 2
+    Nodo 0: Color 0
     Nodo 1: Color 1
     Nodo 2: Color 2
-    Nodo 3: Color 0
-    Nodo 4: Color 1
-    Nodo 5: Color 0
-    Nodo 6: Color 2
-    Nodo 7: Color 0
-    Nodo 8: Color 2
+    Nodo 3: Color 1
+    Nodo 4: Color 0
+    Nodo 5: Color 2
+    Nodo 6: Color 0
+    Nodo 7: Color 1
+    Nodo 8: Color 0
     Nodo 9: Color 1
 
 🟢 Caso 18
-  - Colores usados: 3 (k = 3)
+  - Colores usados: 4 (k = 4)
   - Conflictos: 0
   - Iteraciones: 7
-  - Tiempo: 0.0013 segundos
-    Nodo 0: Color 2
-    Nodo 1: Color 0
-    Nodo 2: Color 2
+  - Tiempo: 0.0019 segundos
+    Nodo 0: Color 0
+    Nodo 1: Color 1
+    Nodo 2: Color 1
     Nodo 3: Color 0
-    Nodo 4: Color 2
-    Nodo 5: Color 1
-    Nodo 6: Color 1
+    Nodo 4: Color 1
+    Nodo 5: Color 2
+    Nodo 6: Color 3
     Nodo 7: Color 0
     Nodo 8: Color 2
     Nodo 9: Color 0
-    Nodo 10: Color 2
-    Nodo 11: Color 0
+    Nodo 10: Color 0
+    Nodo 11: Color 2
     Nodo 12: Color 2
     Nodo 13: Color 1
     Nodo 14: Color 2
-    Nodo 15: Color 0
+    Nodo 15: Color 1
     Nodo 16: Color 0
-    Nodo 17: Color 1
-    Nodo 18: Color 1
-    Nodo 19: Color 0
+    Nodo 17: Color 3
+    Nodo 18: Color 2
+    Nodo 19: Color 1
 
 🟢 Caso 19
   - Colores usados: 4 (k = 4)
   - Conflictos: 0
   - Iteraciones: 4
   - Tiempo: 0.0003 segundos
-    Nodo 0: Color 2
-    Nodo 1: Color 0
-    Nodo 2: Color 3
-    Nodo 3: Color 1
-    Nodo 4: Color 3
-    Nodo 5: Color 0
-    Nodo 6: Color 1
-    Nodo 7: Color 0
-    Nodo 8: Color 1
+    Nodo 0: Color 1
+    Nodo 1: Color 2
+    Nodo 2: Color 0
+    Nodo 3: Color 2
+    Nodo 4: Color 0
+    Nodo 5: Color 2
+    Nodo 6: Color 0
+    Nodo 7: Color 2
+    Nodo 8: Color 3
 
 🟢 Caso 20
   - Colores usados: 4 (k = 4)
   - Conflictos: 0
   - Iteraciones: 6
-  - Tiempo: 0.0014 segundos
-    Nodo 0: Color 1
-    Nodo 1: Color 2
+  - Tiempo: 0.0013 segundos
+    Nodo 0: Color 2
+    Nodo 1: Color 0
     Nodo 2: Color 2
     Nodo 3: Color 0
-    Nodo 4: Color 3
+    Nodo 4: Color 2
     Nodo 5: Color 3
     Nodo 6: Color 1
-    Nodo 7: Color 1
-    Nodo 8: Color 2
-    Nodo 9: Color 2
-    Nodo 10: Color 0
-    Nodo 11: Color 3
-    Nodo 12: Color 0
+    Nodo 7: Color 0
+    Nodo 8: Color 1
+    Nodo 9: Color 0
+    Nodo 10: Color 1
+    Nodo 11: Color 2
+    Nodo 12: Color 1
     Nodo 13: Color 3
-    Nodo 14: Color 0
+    Nodo 14: Color 1
